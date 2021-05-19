@@ -4,7 +4,7 @@
         <div class="row justify-content-between align-items-center">
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-12">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="/">
                        <!--
                         <img class="dark-logo" src="assets/images/sfighb.png" alt="Blogar logo">
                         <img class="light-logo" src="assets/images/sfighb.png" alt="Blogar logo">
@@ -19,7 +19,7 @@
                     <nav class="mainmenu-nav">
                         <!-- Start Mainmanu Nav -->
                         <ul class="mainmenu">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#">Explore</a></li>
                             <li><a href="#">Podcast</a></li>
                             <li><a href="#">Blog</a></li>
@@ -40,7 +40,14 @@
                     <ul class="metabar-block">
                         <li class="icon"><a href="#"><i class="fas fa-bookmark"></i></a></li>
                         <li class="icon"><a href="#"><i class="fas fa-bell"></i></a></li>
-                        <li><a href="#"><img src="assets/images/others/author.png" alt="Author Images"></a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><img src="assets/images/others/author.png" alt="Author Images"></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                        </li>
                     </ul>
                     <!-- Start Hamburger Menu  -->
                     <div class="hamburger-menu d-block d-xl-none">
