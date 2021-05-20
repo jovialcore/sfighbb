@@ -43,9 +43,12 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><img src="assets/images/others/author.png" alt="Author Images"></a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Hello {{ Auth::user()->last_name }}!</a>
+                                <a class="dropdown-item" href="#">About</a>
+                                <a class="dropdown-item" href="#">Help</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <hr class="solid">
+                                <a class="dropdown-item" href="#">Sign Out</a>
                               </div>
                         </li>
                     </ul>

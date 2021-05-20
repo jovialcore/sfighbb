@@ -6,3 +6,20 @@
      margin-top: 50px;
  }
 
+ .dropdown-toggle::after {
+     content: none !important;
+ }
+
+ .dropdown .dropdown-item {
+     color: rgb(15, 15, 15);
+     font-size: 14px;
+ }
+
+ .dropdown-menu {
+     min-width: 170px !important;
+ }
+
+ hr.solid {
+    border-top: 1px solid #999;
+    margin-top: 15px;
+}

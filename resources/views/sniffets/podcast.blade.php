@@ -1,5 +1,5 @@
 <!-- Start Categories List  -->
-<div class="axil-categories-list axil-section-gap bg-color-black">
+<div class="axil-categories-list axil-section-gap">
     <div class="container">
         <div class="row align-items-center mb--10">
             <div class="col-lg-6 col-md-8 col-sm-8 col-12">
