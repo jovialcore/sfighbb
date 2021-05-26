@@ -1,15 +1,13 @@
 <!-- Start Header -->
-<header class="header axil-header header-light header-sticky" style="position: fixed; top: 0; width: 100%;">
+<header class="header axil-header header-light header-sticky shadow" style="position: fixed; top: 0; width: 100%;">
     <div class="header-wrap">
         <div class="row justify-content-between align-items-center">
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-12">
                 <div class="logo">
                     <a href="/">
-                       <!--
-                        <img class="dark-logo" src="assets/images/sfighb.png" alt="Blogar logo">
-                        <img class="light-logo" src="assets/images/sfighb.png" alt="Blogar logo">
-                       -->
-                       <div>SFIGHB</div>
+                        <img class="dark-logo" src="assets/images/sfighblogo.png" alt="Blogar logo">
+                        <img class="light-logo" src="assets/images/sfighblogo.png" alt="Blogar logo">
+    
                     </a>
                 </div>
             </div>
@@ -20,7 +18,6 @@
                         <!-- Start Mainmanu Nav -->
                         <ul class="mainmenu">
                             <li><a href="/">Home</a></li>
-                            <li><a href="#">Explore</a></li>
                             <li><a href="#">Podcast</a></li>
                             <li><a href="#">Blog</a></li>
                         </ul>
@@ -43,12 +40,20 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><img src="assets/images/others/author.png" alt="Author Images"></a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="#">Hello {{ Auth::user()->last_name }}!</a>
-                                <a class="dropdown-item" href="#">About</a>
-                                <a class="dropdown-item" href="#">Help</a>
-                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="/"><span><i class="far fa-user-circle dropdown-icon"></i></span> Hello {{ Auth::user()->last_name }}</a>
+                                <a class="dropdown-item" href="/about"><span><i class="fas fa-info-circle dropdown-icon"></i></span> About</a>
+                                <a class="dropdown-item" href="/policy"><span><i class="far fa-file-alt dropdown-icon"></i></span> Privacy-Policy</a>
+                                <a class="dropdown-item" href="/contact"><span><i class="fas fa-route dropdown-icon"></i></span> Contact Us</a>
+                                <a class="dropdown-item" href="/settings"><span><i class="fas fa-cogs dropdown-icon"></i></span> Settings</a>
+                                <a class="dropdown-item" href="#"><span><i class="fab fa-android dropdown-icon"></i></span> Android version</a>
                                 <hr class="solid">
-                                <a class="dropdown-item" href="#">Sign Out</a>
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    <span><i class="fas fa-sign-out-alt dropdown-icon"></i></span> Sign Out 
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                               </div>
                         </li>
                     </ul>

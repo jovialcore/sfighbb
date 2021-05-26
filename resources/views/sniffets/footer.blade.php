@@ -1,113 +1,6 @@
  <!-- Start Footer Area  -->
  <div class="axil-footer-area axil-footer-style-1 footer-variation-2">
-    <div class="footer-mainmenu">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                    <div class="footer-widget">
-                        <h2 class="title">World</h2>
-                        <div class="inner">
-                            <ul class="ft-menu-list">
-                                <li><a href="#">U.N.</a></li>
-                                <li><a href="#">Conflicts</a></li>
-                                <li><a href="#">Terrorism</a></li>
-                                <li><a href="#">Disasters</a></li>
-                                <li><a href="#">Global Economy</a></li>
-                                <li><a href="#">Environment</a></li>
-                                <li><a href="#">Religion</a></li>
-                                <li><a href="#">Scandals</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                    <div class="footer-widget">
-                        <h2 class="title">Politics</h2>
-                        <div class="inner">
-                            <ul class="ft-menu-list">
-                                <li><a href="#">Executive</a></li>
-                                <li><a href="#">Senate</a></li>
-                                <li><a href="#">House</a></li>
-                                <li><a href="#">Judiciary</a></li>
-                                <li><a href="#">Global Economy</a></li>
-                                <li><a href="#">Foreign policy</a></li>
-                                <li><a href="#">Polls</a></li>
-                                <li><a href="#">Elections</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                    <div class="footer-widget">
-                        <h2 class="title">Entertainment</h2>
-                        <div class="inner">
-                            <ul class="ft-menu-list">
-                                <li><a href="#">Celebrity News</a></li>
-                                <li><a href="#">Movies</a></li>
-                                <li><a href="#">TV News</a></li>
-                                <li><a href="#">Disasters</a></li>
-                                <li><a href="#">Music News</a></li>
-                                <li><a href="#">Environment</a></li>
-                                <li><a href="#">Style News</a></li>
-                                <li><a href="#">Entertainment Video</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                    <div class="footer-widget">
-                        <h2 class="title">Business</h2>
-                        <div class="inner">
-                            <ul class="ft-menu-list">
-                                <li><a href="#">Environment</a></li>
-                                <li><a href="#">Conflicts</a></li>
-                                <li><a href="#">Terrorism</a></li>
-                                <li><a href="#">Disasters</a></li>
-                                <li><a href="#">Global Economy</a></li>
-                                <li><a href="#">Environment</a></li>
-                                <li><a href="#">Religion</a></li>
-                                <li><a href="#">Scandals</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                    <div class="footer-widget">
-                        <h2 class="title">Health</h2>
-                        <div class="inner">
-                            <ul class="ft-menu-list">
-                                <li><a href="#">Movies</a></li>
-                                <li><a href="#">Conflicts</a></li>
-                                <li><a href="#">Terrorism</a></li>
-                                <li><a href="#">Disasters</a></li>
-                                <li><a href="#">Global Economy</a></li>
-                                <li><a href="#">Environment</a></li>
-                                <li><a href="#">Religion</a></li>
-                                <li><a href="#">Scandals</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-                    <div class="footer-widget">
-                        <h2 class="title">About</h2>
-                        <div class="inner">
-                            <ul class="ft-menu-list">
-                                <li><a href="#">U.N.</a></li>
-                                <li><a href="#">Conflicts</a></li>
-                                <li><a href="#">Terrorism</a></li>
-                                <li><a href="#">Disasters</a></li>
-                                <li><a href="#">Global Economy</a></li>
-                                <li><a href="#">Environment</a></li>
-                                <li><a href="#">Religion</a></li>
-                                <li><a href="#">Scandals</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- Start Footer Top Area  -->
     <div class="footer-top">
@@ -117,8 +10,8 @@
                 <div class="col-lg-4 col-md-4">
                     <div class="logo">
                         <a href="index.html">
-                            <img class="dark-logo" src="assets/images/logo/logo-black.png" alt="Logo Images">
-                            <img class="white-logo" src="assets/images/logo/logo-white2.png" alt="Logo Images">
+                            <img class="dark-logo" src="assets/images/sfighblogo.png" alt="Logo Images">
+                            <img class="white-logo" src="assets/images/sfighblogo.png" alt="Logo Images">
                         </a>
                     </div>
                 </div>
@@ -150,7 +43,7 @@
                     <div class="copyright-left">
                         <ul class="mainmenu justify-content-start">
                             <li>
-                                <a class="hover-flip-item-wrapper" href="#">
+                                <a class="hover-flip-item-wrapper" href="/contact">
                                     <span class="hover-flip-item">
                                 <span data-text="Contact Us">Contact Us</span>
                                     </span>
@@ -159,28 +52,14 @@
                             <li>
                                 <a class="hover-flip-item-wrapper" href="#">
                                     <span class="hover-flip-item">
-                                <span data-text="Terms of Use">Terms of Use</span>
+                                <span data-text="Blog">Blog</span>
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a class="hover-flip-item-wrapper" href="#">
+                                <a class="hover-flip-item-wrapper" href="/about">
                                     <span class="hover-flip-item">
-                                <span data-text="AdChoices">AdChoices</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="hover-flip-item-wrapper" href="#">
-                                    <span class="hover-flip-item">
-                                <span data-text="Advertise with Us">Advertise with Us</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="hover-flip-item-wrapper" href="#">
-                                    <span class="hover-flip-item">
-                                <span data-text="Blogar Store">Blogar Store</span>
+                                <span data-text="About">About</span>
                                     </span>
                                 </a>
                             </li>

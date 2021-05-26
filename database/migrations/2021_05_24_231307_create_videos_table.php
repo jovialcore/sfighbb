@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDevotionsTable extends Migration
+class CreateVideosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreateDevotionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('devotions', function (Blueprint $table) {
+        Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('bible_reading');
+            $table->text('title');
             $table->text('story');
-            $table->string('audio');
-            $table->date('release_date')->unique();
+            $table->string('tag');
+            $table->string('url');
             $table->string('thumbnail');
             $table->boolean('publish');
-            $table->integer('view_count')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ class CreateDevotionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('devotions');
+        Schema::dropIfExists('videos');
     }
 }

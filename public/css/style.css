@@ -3,7 +3,7 @@
  } 
  
  .main-wrapper main {
-     margin-top: 50px;
+     margin-top: 65px;
  }
 
  .dropdown-toggle::after {
@@ -23,3 +23,60 @@
     border-top: 1px solid #999;
     margin-top: 15px;
 }
+
+.override-from-group-css input {
+    height: 38px !important;
+    padding: 5px !important;
+}
+
+.devotion-form select option {
+    font-size: 14px !important;
+}
+
+.devotion-form textarea {
+    color: #999;
+}
+
+.devotion-form select {
+    color: #999;
+}
+
+.devotion-form input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+    filter: invert(0.5);
+  }
+
+@media only screen and (max-width: 1199px) {
+.axil-header {
+    padding: 12px 30px !important;
+}
+}
+
+.axil-footer-style-1 {
+    padding-top: 0 !important;
+}
+
+@media only screen and (max-width: 425px) {
+    .single-cat {
+        width: 185px !important;
+    }
+    }
+
+
+    @media only screen and (max-width: 1199px) {
+        header .dropdown {
+            display: none;
+        }
+        }
+
+        .dropdown-icon {
+            font-size: 14px;
+            padding: 8px;
+            color: #333;
+        }
+
+        .sidebar-icon {
+            font-size: 14px;
+            padding: 8px;
+            color: #333;
+        }

@@ -22,3 +22,21 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\DevotionController::class, 'index'])->name('index');
 Route::get('/', [App\Http\Controllers\DevotionController::class, 'index'])->name('index');
 Route::get('/devotion', [App\Http\Controllers\DevotionController::class, 'show'])->name('show');
+
+Route::get('/api_7834y3rgdschfdu34er34fccge743c', [App\Http\Controllers\DevotionController::class, 'create'])->name('devotion');
+Route::post('/devotion/store', [App\Http\Controllers\DevotionController::class, 'store'])->name('devotion.store');
+
+Route::get('/api_7834y3rghsdfshc536vf98ccge743c', [App\Http\Controllers\PostController::class, 'create'])->name('post');
+Route::post('/post/store', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
+
+Route::get('/api_7834y3rgdschfnvfdvjngvccge743c', [App\Http\Controllers\VideoController::class, 'create'])->name('videos');
+Route::post('/video/store', [App\Http\Controllers\VideoController::class, 'store'])->name('video.store');
+
+Route::get('/api_7834y3rgdsch854qtgr34fccge743c', [App\Http\Controllers\AdminController::class, 'about'])->name('about');
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about.us');
+
+Route::get('/api_7834y98iuhjvwdsr4er34fccge743c', [App\Http\Controllers\AdminController::class, 'faq'])->name('faq');
+Route::get('/policy', [App\Http\Controllers\HomeController::class, 'policy'])->name('policy');
+Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+Route::get('/settings', [App\Http\Controllers\HomeController::class, 'setting'])->name('setting');
+

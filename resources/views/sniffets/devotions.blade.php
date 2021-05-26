@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-4 col-sm-4 col-12 text-right">
-                <span style="font-size: 12px">Daily devotions God's Heartbeat</span>
+                <span style="font-size: 12px"><i class="fal fa-arrow-left mr-4"></i> <i class="fal fa-arrow-right"></i></span>
             </div>
         </div>
         <div class="row">
@@ -17,19 +17,19 @@
                 <div class="list-categories categories-activation axil-slick-arrow arrow-between-side">
 
                     <!-- Start Single Category  -->
-                    <div class="single-cat">
+                    <div class="single-cat" style="width: 185px !important">
                         <div class="inner">
                             <a href="#">
                                 <div class="thumbnail">
                                     <img src="assets/images/devo/devo1.png" alt="post categories images">
                                 </div> 
                                 <div class="content">
-                                    <h5 class="title">Tag</h5>
+                                    <h5 class="title">Feb 17, 2021</h5>
                                 </div>
                             </a>
                             
                         </div>
-                        <div class="content-bt pt-2">
+                        <div style="display: none" class="content-bt pt-2">
                             <p 
                             class="title" style="font-size: 13px; line-height: 1.2">When things go wrong.
                             <br><span style="font-size: 12px;">May 10, 2021</span>
