@@ -20,19 +20,21 @@ class DevotionController extends Controller
     public function index() {
         $now = Carbon::now();
         $today = Carbon::today();
+        $dtoday = $today->toFormattedDateString();
+
         $tomorrow = Carbon::tomorrow();
+        $dtomorrow = $tomorrow->toFormattedDateString();
+
         $yesterday = Carbon::yesterday();
+        $dyesterday = $yesterday->toFormattedDateString();
 
         $getTodayDevotion = Devotion::where('release_date', $today)->get();
-        $check = $now->toDateString();
-        dd("$now");
-        dd("$getTodayDevotion");
         $getTomorrowDevotion = Devotion::where('release_date', $tomorrow)->get();
         $getYesterdayDevotion = Devotion::where('release_date', $yesterday)->get();
 
-        //$Devotion = Post::get();
+        //$Devotion = Devotion::get();
 
-        return view('devotion.index', compact('getTodayDevotion', 'getTomorrowDevotion', 'getYesterdayDevotion'));
+        return view('devotion.index', compact('getTodayDevotion', 'getTomorrowDevotion', 'getYesterdayDevotion', 'dtoday', 'dtomorrow', 'dyesterday'));
     }
 
     public function show() {
