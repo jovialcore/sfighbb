@@ -14,7 +14,6 @@ class AdminController extends Controller
     }
 
     public function devotion() {
-        
         return view('admin.devotion');
     }
 
@@ -27,10 +26,20 @@ class AdminController extends Controller
     }
 
     public function about() {
-        return view('admin.about');
+        if (Auth()->user()->user_type != 1) {
+            return redirect()->route('index');
+        } else {
+            return view('admin.about');
+        }
+        
     }
 
     public function faq() {
-        return view('admin.help');
+        if (Auth()->user()->user_type != 1) {
+            return redirect()->route('index');
+        } else {
+            return view('admin.help');
+        }
+        
     }
 }

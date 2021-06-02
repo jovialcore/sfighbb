@@ -19,7 +19,7 @@
     <!-- CSS
     ============================================ -->
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/ghb.png') }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/font-awesome.css') }}">
@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/base.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/plugins.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+    <!--ckeditor-->
+    <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
 
 </head>
 <body>
@@ -88,4 +91,27 @@
 
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+        <!-- Editor -->
+    <script>
+        ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+</script>
+
+<script>
+    ClassicEditor
+            .create( document.querySelector( '#editor2' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+</script>
 </html>

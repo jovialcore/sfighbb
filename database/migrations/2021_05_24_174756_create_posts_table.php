@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->text('title');
             $table->text('story');
             $table->string('thumbnail');
+            $table->string('small_thumbnail')->nullable();
             $table->boolean('publish');
             $table->integer('view_count')->nullable();
             $table->timestamps();

@@ -21,6 +21,8 @@ class CreateDevotionsTable extends Migration
             $table->string('audio');
             $table->date('release_date')->unique();
             $table->string('thumbnail');
+            $table->string('small_thumbnail')->nullable();
+            $table->string('smaller_thumbnail')->nullable();
             $table->boolean('publish');
             $table->integer('view_count')->nullable();
             $table->timestamps();

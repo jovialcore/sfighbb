@@ -40,19 +40,34 @@
                                     <label>Title</label>
                                     <input id="title" name="title" placeholder="Title of Video" type="text" required>
                                 </div>
+                                @error('title')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Tag</label>
-                                    <input id="title" name="tag" placeholder="Event location or Tag" type="text" required>
+                                    <input id="tag" name="tag" placeholder="Event location or Tag" type="text" required>
                                 </div>
+                                @error('tag')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Url</label>
-                                    <input id="title" name="url" placeholder="Video URL" type="text" required>
+                                    <input id="url" name="url" placeholder="Video URL" type="text" required>
                                 </div>
+                                @error('url')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -63,6 +78,11 @@
                                         <option value="0">No</option>
                                     </select>
                                 </div>
+                                @error('publish')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
 
@@ -72,13 +92,11 @@
                                     <label for="thumbnail">Thumbnail</label>
                                     <input id="thumbnail" name="thumbnail" type="file" required>
                                 </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label>Story</label>
-                                    <textarea id="story" name="story" placeholder="Past or write video describtion here..." required></textarea>
-                                </div>
+                                @error('thumbnail')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-lg-12">

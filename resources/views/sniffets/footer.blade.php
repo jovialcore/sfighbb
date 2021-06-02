@@ -9,9 +9,9 @@
 
                 <div class="col-lg-4 col-md-4">
                     <div class="logo">
-                        <a href="index.html">
-                            <img class="dark-logo" src="assets/images/sfighblogo.png" alt="Logo Images">
-                            <img class="white-logo" src="assets/images/sfighblogo.png" alt="Logo Images">
+                        <a href="/">
+                            <img class="dark-logo" src="{{ asset('assets/images/ghb.png') }}" alt="Logo Images">
+                            <img class="white-logo" src="{{ asset('assets/images/ghb.png') }}" alt="Logo Images">
                         </a>
                     </div>
                 </div>
@@ -21,10 +21,9 @@
                     <div class="d-flex justify-content-start mt_sm--15 justify-content-md-end align-items-center flex-wrap">
                         <h5 class="follow-title mb--0 mr--20">Follow Us</h5>
                         <ul class="social-icon color-tertiary md-size justify-content-start">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a target="_blank" href="https://facebook.com/love4sfi"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/SistersFellowshipInternational/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCeQpaXDTFJ12NJKjpIJAgyg"><i class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
                     <!-- End Post List  -->

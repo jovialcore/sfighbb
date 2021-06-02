@@ -4,8 +4,9 @@
         <div class="mobile-menu-top">
             <div class="logo">
                 <a href="/">
-                    <img class="dark-logo" src="assets/images/sfighblogo.png" alt="Logo Images">
-                    <img class="light-logo" src="assets/images/sfighblogo.png" alt="Logo Images">
+                    <img class="dark-logo" src="{{ asset('assets/images/ghb.png') }}" alt="Logo Images">
+                    <img class="light-logo" src="{{ asset('assets/images/ghb.png') }}" alt="Logo Images">
+                    <span>SFIGHB</span>
                 </a>
             </div>
             <div class="mobile-close">

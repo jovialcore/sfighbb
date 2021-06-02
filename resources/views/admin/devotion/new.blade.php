@@ -35,17 +35,16 @@
                                 class="required">*</span></p>
                         <div class="row row--10">
 
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Title</label>
                                     <input id="title" name="title" placeholder="Enter title of devotion" type="text" required>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Bible reading</label>
-                                    <input id="bible_reading" name="bible_reading" placeholder="Enter the bible reading" type="text" required>
-                                </div>
+                                @error('title')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-md-6">
@@ -53,6 +52,11 @@
                                     <label>Release Date</label>
                                     <input id="release_date" name="release_date" type="date" required>
                                 </div>
+                                @error('release_date')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -63,6 +67,11 @@
                                         <option value="0">No</option>
                                     </select>
                                 </div>
+                                @error('publish')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-md-6">
@@ -70,24 +79,52 @@
                                     <label for="thumbnail">Thumbnail</label>
                                     <input id="thumbnail" name="thumbnail" type="file" required>
                                 </div>
+                                @error('thumbnail')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group override-from-group-css">
                                     <label for="Podcast">Podcast</label>
                                     <input id="audio" name="audio" type="file" required>
                                 </div>
+                                @error('audio')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
+                            
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Bible reading</label>
+                                    <textarea name="bible_reading" id="editor2" cols="30" rows="10" placeholder="Enter the bible reading"></textarea>
+                                </div>
+                                @error('editor2')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-12">
                                 <div class="form-group">
                                     <label>Story</label>
-                                    <textarea id="story" name="story" placeholder="Past or write devotion here..." required></textarea>
+                                    <textarea id="editor" name="story" placeholder="Past or write devotion here..."></textarea>
                                 </div>
+                                @error('editor')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                             <div class="col-lg-12">
                                 <div class="form-submit cerchio">
-                                    <input name="submit" type="submit" id="submit" class="axil-button button-rounded" value="Publish">
+                                    <button type="submit" id="submit" class="axil-button button-rounded">Publish</button>
                                 </div>
                             </div>
                         </div>

@@ -5,9 +5,9 @@
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 col-12">
                 <div class="logo">
                     <a href="/">
-                        <img class="dark-logo" src="assets/images/sfighblogo.png" alt="Blogar logo">
-                        <img class="light-logo" src="assets/images/sfighblogo.png" alt="Blogar logo">
-    
+                        <img class="dark-logo" src="{{ asset('assets/images/ghb.png') }}" alt="Blogar logo">
+                        <img class="light-logo" src="{{ asset('assets/images/ghb.png') }}" alt="Blogar logo">
+                        <span>SFIGHB</span>
                     </a>
                 </div>
             </div>
@@ -17,9 +17,10 @@
                     <nav class="mainmenu-nav">
                         <!-- Start Mainmanu Nav -->
                         <ul class="mainmenu">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="#">Podcast</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="/#home">Devotions</a></li>
+                            <li><a href="/#podcast">Podcasts</a></li>
+                            <li><a href="/#posts">Blog</a></li>
+                            <li><a href="/#youtube">Videos</a></li>
                         </ul>
                         <!-- End Mainmanu Nav -->
                     </nav>
@@ -28,19 +29,22 @@
 
             <div class="col-xl-3 col-lg-8 col-md-8 col-sm-9 col-12">
                 <div class="header-search text-right d-flex align-items-center">
-                    <form class="header-search-form">
+                    <form class="header-search-form" action="/search" method="GET">
                         <div class="axil-search form-group">
                             <button type="submit" class="search-button"><i class="fal fa-search"></i></button>
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text"
+                             name="search"
+                             value="" 
+                             class="form-control" 
+                             placeholder="Search">
                         </div>
                     </form>
                     <ul class="metabar-block">
-                        <li class="icon"><a href="#"><i class="fas fa-bookmark"></i></a></li>
-                        <li class="icon"><a href="#"><i class="fas fa-bell"></i></a></li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><img src="assets/images/others/author.png" alt="Author Images"></a>
+                            <a class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                                <span class="icon ml-3"><i class="fas fa-user"></i></span>
+                            </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="/"><span><i class="far fa-user-circle dropdown-icon"></i></span> Hello {{ Auth::user()->last_name }}</a>
                                 <a class="dropdown-item" href="/about"><span><i class="fas fa-info-circle dropdown-icon"></i></span> About</a>
                                 <a class="dropdown-item" href="/policy"><span><i class="far fa-file-alt dropdown-icon"></i></span> Privacy-Policy</a>
                                 <a class="dropdown-item" href="/contact"><span><i class="fas fa-route dropdown-icon"></i></span> Contact Us</a>

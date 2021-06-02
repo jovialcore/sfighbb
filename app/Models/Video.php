@@ -13,7 +13,6 @@ class Video extends Model
         'url',
         'title',
         'thumbnail',
-        'story',
         'publish',
     ];
 }

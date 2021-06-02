@@ -12,7 +12,12 @@ class Post extends Model
         'view_count',
         'title',
         'thumbnail',
+        'small_thumbnail',
         'story',
         'publish',
     ];
+
+    public function komments() {
+        return $this->hasMany(Komment::class)->orderBy('created_at','DESC');
+    }
 }

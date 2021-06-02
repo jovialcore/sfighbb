@@ -45,4 +45,9 @@ class HomeController extends Controller
     {
         return view('setting');
     }
+
+    public function author()
+    {
+        return view('author');
+    }
 }
