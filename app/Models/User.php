@@ -50,14 +50,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-/*
-    protected static function boot() {
-        parent::boot();
 
-        static::created(function ($user) {
-            Mail::to($user->email)->send(new \App\Mail\NewUserWelcomeMail());
-        });
-        
-    }
-*/
 }

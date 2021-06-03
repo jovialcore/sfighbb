@@ -42,6 +42,8 @@ class DevotionController extends Controller
                                 ->take(30)
                                 ->get();
 
+                                
+
         $videos = Video::orderBy('id', 'DESC')
                                 ->latest()
                                 ->first();
@@ -71,9 +73,6 @@ class DevotionController extends Controller
         //Comment fetch
         $comments = $devotion->comments()->paginate(10);
 
-        //Get comment count
-        //$comment_count = $post->comments->count();
-        //Increment number of views
         $count = $devotion->view_count + 1;
         $devotion->update([
             'view_count' => $count,
