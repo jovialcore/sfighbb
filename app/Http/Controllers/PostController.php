@@ -45,7 +45,7 @@ class PostController extends Controller
 
         $data = request()->validate([
             'title' => 'required',
-            'story' => 'required',
+            'story' => '',
             'publish' => 'required',
             'thumbnail' => ['required', 'image'],
         ]);
