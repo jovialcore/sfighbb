@@ -54,13 +54,13 @@ class PostController extends Controller
 
         //Images for Thumbnails 1920x870
         $thumbnailPath = request('thumbnail')->store('post_thumbnails', 'public');
-        $img = Image::make(public_path("storage/{$thumbnailPath}"))->fit(1920, 870);
-        $img->save();
+        //$img = Image::make(public_path("storage/{$thumbnailPath}"))->fit(1920, 870);
+        //$img->save();
 
         //Images for Thumbnails 600x600
         $thumbnailPath_2 = request('thumbnail')->store('post_thumbnails2', 'public');
-        $img = Image::make(public_path("storage/{$thumbnailPath_2}"))->fit(600, 600);
-        $img->save();
+        //$img = Image::make(public_path("storage/{$thumbnailPath_2}"))->fit(600, 600);
+        //$img->save();
 
         Post::create([
         'title' => $data['title'],
