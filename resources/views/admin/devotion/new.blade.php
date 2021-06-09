@@ -24,7 +24,6 @@
         <div class="col-md-9">
             <!-- Start Comment Form Area  -->
             <div class="axil-comment-area">
-                
 
                 <!-- Start Comment Respond  -->
                 <div class="comment-respond devotion-form">

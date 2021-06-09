@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Post;
 use App\Models\Komment;
 use Session;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -40,7 +41,7 @@ class PostController extends Controller
         return view('posts.show', compact('posts', 'comment_count', 'comments'));
     }
 
-    public function store()
+    public function store(Request $request)
     {
 
         $data = request()->validate([
@@ -50,17 +51,19 @@ class PostController extends Controller
             'thumbnail' => ['required', 'image'],
         ]);
 
-        
-
         //Images for Thumbnails 1920x870
-        $thumbnailPath = request('thumbnail')->store('post_thumbnails', 'public');
+        //$thumbnailPath = Storage::disk('do_spaces')->request('thumbnail')->store('post_thumbnails', 'public');
         //$img = Image::make(public_path("storage/{$thumbnailPath}"))->fit(1920, 870);
         //$img->save();
 
+        $thumbnailPath = Storage::disk('digitalocean')->putFile('uploads', request()->thumbnail, 'public');
+
         //Images for Thumbnails 600x600
-        $thumbnailPath_2 = request('thumbnail')->store('post_thumbnails2', 'public');
+        //$thumbnailPath_2 = Storage::disk('do_spaces')->request('thumbnail')->store('post_thumbnails2', 'public');
         //$img = Image::make(public_path("storage/{$thumbnailPath_2}"))->fit(600, 600);
         //$img->save();
+
+        $thumbnailPath_2 =  Storage::disk('digitalocean')->putFile('uploads', request()->thumbnail, 'public');
 
         Post::create([
         'title' => $data['title'],
