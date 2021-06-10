@@ -51,19 +51,9 @@ class PostController extends Controller
             'thumbnail' => ['required', 'image'],
         ]);
 
-        //Images for Thumbnails 1920x870
-        //$thumbnailPath = Storage::disk('do_spaces')->request('thumbnail')->store('post_thumbnails', 'public');
-        //$img = Image::make(public_path("storage/{$thumbnailPath}"))->fit(1920, 870);
-        //$img->save();
+        $thumbnailPath = Storage::disk('do')->putFile('post_uploads', request()->thumbnail, 'public');
 
-        $thumbnailPath = Storage::disk('digitalocean')->putFile('uploads', request()->thumbnail, 'public');
-
-        //Images for Thumbnails 600x600
-        //$thumbnailPath_2 = Storage::disk('do_spaces')->request('thumbnail')->store('post_thumbnails2', 'public');
-        //$img = Image::make(public_path("storage/{$thumbnailPath_2}"))->fit(600, 600);
-        //$img->save();
-
-        $thumbnailPath_2 =  Storage::disk('digitalocean')->putFile('uploads', request()->thumbnail, 'public');
+        $thumbnailPath_2 =  Storage::disk('do')->putFile('post_uploads_2', request()->thumbnail, 'public');
 
         Post::create([
         'title' => $data['title'],

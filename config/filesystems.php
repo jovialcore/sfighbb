@@ -52,13 +52,13 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
         ],
 
-        'digitalocean' => [
+        'do' => [
             'driver' => 's3',
-            'key' => env('DIGITALOCEAN_SPACES_KEY'),
-            'secret' => env('DIGITALOCEAN_SPACES_SECRET'),
-            'endpoint' => env('DIGITALOCEAN_SPACES_ENDPOINT'),
-            'region' => env('DIGITALOCEAN_SPACES_REGION'),
-            'bucket' => env('DIGITALOCEAN_SPACES_BUCKET'),
+            'key' => env('DO_SPACES_KEY'),
+            'secret' => env('DO_SPACES_SECRET'),
+            'endpoint' => env('DO_SPACES_ENDPOINT'),
+            'region' => env('DO_SPACES_REGION'),
+            'bucket' => env('DO_SPACES_BUCKET'),
         ],
 
     ],
