@@ -28,6 +28,9 @@ class NewUserWelcomeMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.welcome-email');
+        return $this->subject('Sfi Fellowship')
+                    ->markdown('emails.welcome-email')
+                    ->from('hello@sfiloveinaction.org');
+
     }
 }
