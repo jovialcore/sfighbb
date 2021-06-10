@@ -24,7 +24,7 @@ class VideoController extends Controller
         
     }
 
-    public function store()
+    public function store(Request $request)
     {
 
         $data = request()->validate([
@@ -35,9 +35,13 @@ class VideoController extends Controller
             'thumbnail' => ['required', 'image'],
         ]);
 
-        $thumbnailPath = request('thumbnail')->store('video_thumbnails', 'public');
-        $img = Image::make(public_path("storage/{$thumbnailPath}"))->fit(600, 600);
-        $img->save();
+        $thumbnailPath = cloudinary()->upload($request->file('thumbnail')->getRealPath(), [
+            'folder' => 'upload_devotion',
+            'transformation' => [
+                      'width' => 600,
+                      'height' => 600,
+             ]
+])->getSecurePath();
 
         Video::create([
         'title' => $data['title'],

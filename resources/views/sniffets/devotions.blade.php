@@ -23,7 +23,7 @@
                         <div class="inner">
                             <a href="/devotion/{{$devotion->id}}">
                                 <div class="thumbnail">
-                                    <img src="/storage/{{$devotion->smaller_thumbnail}}" alt="post categories images">
+                                    <img src="{{$devotion->smaller_thumbnail}}" alt="post categories images">
                                 </div> 
                                 <div class="content">
                                     <h5 class="title">{{ Carbon\Carbon::parse($devotion['release_date'])->toFormattedDateString() }}</h5>

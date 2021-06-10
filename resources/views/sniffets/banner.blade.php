@@ -13,7 +13,7 @@
                              <!-- Start Post Thumbnail  -->
                              <div class="post-thumbnail">
                                  <a href="/devotion/{{$output->id}}">
-                                     <img class="img-fluid" src="/storage/{{$output->thumbnail}}" alt="Post Images">
+                                     <img class="img-fluid" src="{{$output->thumbnail}}" alt="Post Images">
                                  </a>
                              </div>
                              <!-- End Post Thumbnail  -->
@@ -76,7 +76,7 @@
                             <!-- Start Post Thumbnail  -->
                             <div class="post-thumbnail">
                                 <a href="/devotion/{{$output->id}}">
-                                    <img class="img-fluid" src="/storage/{{$output->thumbnail}}" alt="Post Images">
+                                    <img class="img-fluid" src="{{$output->thumbnail}}" alt="Post Images">
                                 </a>
                             </div>
                             <!-- End Post Thumbnail  -->
@@ -140,7 +140,7 @@
                             <!-- Start Post Thumbnail  -->
                             <div class="post-thumbnail">
                                 <a href="/devotion/{{$output->id}}">
-                                    <img class="img-fluid" src="/storage/{{$output->thumbnail}}" alt="Post Images">
+                                    <img class="img-fluid" src="{{$output->thumbnail}}" alt="Post Images">
                                 </a>
                             </div>
                             <!-- End Post Thumbnail  -->

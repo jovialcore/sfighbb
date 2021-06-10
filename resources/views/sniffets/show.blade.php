@@ -1,6 +1,6 @@
 
 <!-- Start Banner Area -->
-<div class="banner banner-single-post post-layout-3 post-formate post-standard bg_image bg_image--2 d-flex align-items-end" style="background-image: url('/storage/{{ $devotion->small_thumbnail }}')">
+<div class="banner banner-single-post post-layout-3 post-formate post-standard bg_image bg_image--2 d-flex align-items-end" style="background-image: url('{{ $devotion->thumbnail }}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
@@ -83,14 +83,14 @@
                     <div class="about-author">
                         <div class="media">
                             <div class="thumbnail">
-                                <a href="#">
+                                <a href="/author">
                                     <img class="image-fluid" src="{{ asset('assets/images/sfilogo.png') }}" alt="Author Images">
                                 </a>
                             </div>
                             <div class="media-body">
                                 <div class="author-info">
                                     <h5 class="title">
-                                        <a class="hover-flip-item-wrapper" href="#">
+                                        <a class="hover-flip-item-wrapper" href="/author">
                                             <span class="hover-flip-item">
                                                 <span data-text="Rev. Mrs Nches Iredu">Rev. Mrs Nches Iredu</span>
                                             </span>

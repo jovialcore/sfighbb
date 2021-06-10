@@ -17,7 +17,7 @@
                 <div class="content-block post-default image-rounded mt--30">
                     <div class="post-thumbnail">
                         <a href="post-details.html">
-                            <img src="/storage/{{ $videos->thumbnail }}" alt="Post Images">
+                            <img src="{{ $videos->thumbnail }}" alt="Post Images">
                         </a>
                         <a class="video-popup position-top-center" target="_blank" href="{{ $videos->url }}"><span
                                 class="play-icon"></span></a>
@@ -74,7 +74,7 @@
                         <div class="content-block post-default image-rounded mt--30">
                             <div class="post-thumbnail">
                                 <a target="_blank" href="{{ $video->url }}">
-                                    <img src="/storage/{{ $video->thumbnail }}" alt="Post Images">
+                                    <img src="{{ $video->thumbnail }}" alt="Post Images">
                                 </a>
                                 <a class="video-popup size-medium position-top-center" target="_blank" href="{{ $video->url }}"><span class="play-icon"></span></a>
                             </div>

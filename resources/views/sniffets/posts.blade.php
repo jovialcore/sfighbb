@@ -23,7 +23,7 @@
                      <div class="inner">
                          <a href="/post/{{$post->id}}">
                              <div class="thumbnail">
-                                 <img src="/storage/{{$post->small_thumbnail}}" alt="post categories images">
+                                 <img src="{{ $post->small_thumbnail }}" alt="post categories images">
                              </div> 
                              <div class="content">
                                  <h5 class="title">{{ Carbon\Carbon::parse($post['created_at'])->toFormattedDateString() }}</h5>

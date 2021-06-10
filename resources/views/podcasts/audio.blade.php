@@ -2,7 +2,7 @@
 
 <div class="container-audio">
     <audio controls  loop autoplay>
-               <source src="/storage/{{ $podcast->audio }}" type="audio/ogg">
+               <source src="{{ $podcast->audio }}" type="audio/ogg">
                Your browser dose not Support the audio Tag
            </audio>
 </div>

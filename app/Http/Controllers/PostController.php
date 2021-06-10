@@ -51,9 +51,21 @@ class PostController extends Controller
             'thumbnail' => ['required', 'image'],
         ]);
 
-        $thumbnailPath = Storage::disk('do')->putFile('post_uploads', request()->thumbnail, 'public');
+        $thumbnailPath = cloudinary()->upload($request->file('thumbnail')->getRealPath(), [
+            'folder' => 'upload_post',
+            'transformation' => [
+                      'width' => 1920,
+                      'height' => 870,
+             ]
+])->getSecurePath();
 
-        $thumbnailPath_2 =  Storage::disk('do')->putFile('post_uploads_2', request()->thumbnail, 'public');
+        $thumbnailPath_2 = cloudinary()->upload($request->file('thumbnail')->getRealPath(), [
+            'folder' => 'upload_post',
+            'transformation' => [
+                      'width' => 600,
+                      'height' => 600,
+             ]
+])->getSecurePath();
 
         Post::create([
         'title' => $data['title'],

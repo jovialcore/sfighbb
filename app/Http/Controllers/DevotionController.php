@@ -91,7 +91,7 @@ class DevotionController extends Controller
         
     }
 
-    public function store()
+    public function store(Request $request)
     {
 
         $data = request()->validate([
@@ -104,26 +104,39 @@ class DevotionController extends Controller
             'audio' => ['required', 'mimes:mp3'],
         ]);
         //Images for Thumbnails 2880x1440
-        $thumbnailPath = request('thumbnail')->store('thumbnails', 'public');
-        $img1 = Image::make(public_path("storage/{$thumbnailPath}"))->fit(2880, 1440);
-        $img1->save();
+        $thumbnailPath = cloudinary()->upload($request->file('thumbnail')->getRealPath(), [
+            'folder' => 'upload_devotion',
+            'transformation' => [
+                      'width' => 1920,
+                      'height' => 870,
+             ]
+])->getSecurePath();
 
 
 
         //Images for Thumbnails 1920x870
-        $thumbnailPath1920x870 = request('thumbnail')->store('thumbnails1', 'public');
-        $img2 = Image::make(public_path("storage/{$thumbnailPath1920x870}"))->fit(1920, 870);
-        $img2->save();
+      /*  $thumbnailPath1920x870 = cloudinary()->upload($request->file('thumbnail')->getRealPath(), [
+            'folder' => 'upload_devotion',
+            'transformation' => [
+                      'width' => 1920,
+                      'height' => 870,
+             ]
+])->getSecurePath(); */
 
 
 
         //Images for Thumbnails 600x600
-        $thumbnailPath600x600 = request('thumbnail')->store('thumbnails2', 'public');
-        $img3 = Image::make(public_path("storage/{$thumbnailPath600x600}"))->fit(600, 600);
-        $img3->save();
+        $thumbnailPath600x600 = cloudinary()->upload($request->file('thumbnail')->getRealPath(), [
+            'folder' => 'upload_devotion',
+            'transformation' => [
+                      'width' => 600,
+                      'height' => 600,
+             ]
+])->getSecurePath();
 
         //Audio for podcast
-        $audioPath = request('audio')->store('podcasts', 'public');
+        $audioPath  = cloudinary()->uploadFile($request->file('audio')->getRealPath())->getSecurePath();
+                    
 
         Devotion::create([
         'title' => $data['title'],
@@ -133,7 +146,6 @@ class DevotionController extends Controller
         'release_date' => $data['release_date'],
         'audio' => $audioPath,
         'thumbnail' => $thumbnailPath,
-        'small_thumbnail' => $thumbnailPath1920x870,
         'smaller_thumbnail' => $thumbnailPath600x600,
         ]);
 
